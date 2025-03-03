@@ -30,8 +30,9 @@ public class CalculatorServiceTest {
         Assert.assertEquals(expected,result);
     }
 
-    @Test
-    public void sumOfNumbers(){
+    @Test(timeout = 2000) //2s time
+    public void sumOfNumbers() throws InterruptedException {
+        Thread.sleep(3000);
         System.out.println("Test for sumOfNumbers");
         int result = CalculatorService.sumOfNumbers(23, 12, 43, 54);
         int expected =132;
